@@ -1,4 +1,4 @@
-# wodexe
+# movie-web
 
 ## Project setup
 ```
