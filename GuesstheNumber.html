@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+body{
+  background:purple;
+  color:white;
+  font-size:xx-large;
+  text-align:center;
+}
+ 
+p{
+  color: white;
+  font-size: 25px;
+}
+#button{
+  background: purple;
+  color: whitesmoke;
+
+}
+#box1{
+	background-color: black;
+	color: purple;
+	border-radius: 25px;
+	width: 750px;
+	height: 300px;
+}
+#box2{
+	background-color: white;
+	color: purple;
+	border-radius: 25px;
+	height: auto;
+}
+#footer{
+	font-size: 15px;
+}
+  input{
+  font-size:large;
+  width:300px;
+  text-align:center;
+}
+</style>
+  <title>Guess the number game from 1 - 100</title>
+</head>
+<body>
+	<div id="box1" class="container my-5 p-5">
+  <h1><strong>Guess the Number</strong></h1>
+  <p>The number is between 1 to 100</p>
+  <input type="number" id="userinput" placeholder="Type your number here...">
+  <button class="btn btn-lg" id="button" onclick="check()">Submit</button></div>
+  <br>
+<div id="box2" class="container">
+  <output class="p-3" id="output"></output></div>
+  <footer>
+  <p class="p-5 my-5" id="footer">&copy; Project by Rajaruban 2021</p></footer>
+  <script type="text/javascript">
+  	//generating random number
+var guessnumber=Math.round(Math.random()*100)
+document.getElementById("output").innerHTML = "Your result will be here!";
+console.log(guessnumber)
+function check(){
+ var userguess=document.getElementById("userinput").value
+console.log(userguess)
+
+if(userguess>guessnumber){
+  document.getElementById("output").innerHTML = "Your guess is too high!";
+}
+  else if(userguess<guessnumber){
+ document.getElementById("output").innerHTML = "Your guess is too low!";
+  }
+else
+  {
+   document.getElementById("output").innerHTML = "You got it, mate, and your guessed number is "+guessnumber;
+  }
+}
+  </script>
+</body>
+</html>
