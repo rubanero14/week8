@@ -43,7 +43,7 @@ p{
 #footer{
 	font-size: 15px;
 }
-  input{
+input{
   font-size:large;
   width:300px;
   text-align:center;
@@ -53,7 +53,7 @@ p{
       width: 80%;
       lightgreen
     }
-    #box3{
+#box3{
       width: 50%;
     }
    }
@@ -88,9 +88,10 @@ if(userguess>guessnumber){
   }
 else
   {
-   document.getElementById("output").innerHTML = "You got it, mate, and your guessed number is "+guessnumber;
-   document.getElementById("box2").style.backgroundColor = 'lightgreen';
-
+   document.getElementById("output").innerHTML = "You got it, mate, and your guessed number is "+"<kbd>"+guessnumber+"</kbd>"+"!";
+   document.getElementById("box2").style.backgroundColor = 'mediumpurple';
+   document.getElementById("box2").style.color = 'whitesmoke';
+ 
   }
 }
   </script>
